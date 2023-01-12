@@ -25,14 +25,13 @@
 
 	</dependencies>
 	
-
-       <distributionManagement>
-    <repository>
-        <id>central</id>
-        <name>a0va9bga9ha9q-artifactory-primary-0-releases</name>
-        <url>https://foodie.jfrog.io/artifactory/libs-release</url>
-    </repository>
-  	</distributionManagement>
+  <distributionManagement>
+    <snapshotRepository>
+        <id>snapshots</id>
+        <name>a0va9bga9ha9q-artifactory-primary-0-snapshots</name>
+        <url>https://foodie.jfrog.io/artifactory/libs-snapshot</url>
+    </snapshotRepository>
+</distributionManagement>
 	
 	<pluginRepositories>
 	    <pluginRepository>    
