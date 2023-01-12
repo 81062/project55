@@ -25,16 +25,12 @@
 
 	</dependencies>
 	
-	<distributionManagement>
-		 <snapshotRepository>
-		    <id>jfrogRepo</id>
-		    <url>http://13.114.144.61/repository/sample-snapshots/</url>
-		 </snapshotRepository>
-		
-		<repository>
-		    <id>jfrogRepo</id>
-		    <url>http://13.114.144.61/repository/sample-releases/</url>
-		</repository>
+		 <distributionManagement>
+    <repository>
+        <id>central</id>
+        <name>a0va9bga9ha9q-artifactory-primary-0-releases</name>
+        <url>https://foodie.jfrog.io/artifactory/libs-release</url>
+    </repository>
   	</distributionManagement>
 	
 	<pluginRepositories>
