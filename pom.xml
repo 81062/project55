@@ -10,7 +10,7 @@
 	
 	<properties>
 		<docker.image.prefix>kammana</docker.image.prefix>
-		<sonar.host.url>http://43.207.64.171/</sonar.host.url>
+		<sonar.host.url>http://35.77.66.142/</sonar.host.url>
 
 	</properties>
 	<dependencies>
@@ -25,7 +25,8 @@
 
 	</dependencies>
 	
-		 <distributionManagement>
+
+       <distributionManagement>
     <repository>
         <id>central</id>
         <name>a0va9bga9ha9q-artifactory-primary-0-releases</name>
