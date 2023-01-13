@@ -10,7 +10,7 @@
 	
 	<properties>
 		<docker.image.prefix>kammana</docker.image.prefix>
-		<sonar.host.url>http://35.77.66.142/</sonar.host.url>
+		<sonar.host.url>http://18.183.54.21/</sonar.host.url>
 
 	</properties>
 	<dependencies>
@@ -28,8 +28,8 @@
   <distributionManagement>
     <snapshotRepository>
         <id>snapshots</id>
-        <name>a0va9bga9ha9q-artifactory-primary-0-snapshots</name>
-        <url>https://foodie.jfrog.io/artifactory/libs-snapshot</url>
+        <name>jfrog.cloudbinary.io-snapshots</name>
+        <url>https:http://35.76.28.95:8081/artifactory/libs-snapshot-local</url>
     </snapshotRepository>
 </distributionManagement>
 	
