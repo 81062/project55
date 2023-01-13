@@ -25,13 +25,17 @@
 
 	</dependencies>
 	
-  <distributionManagement>
-    <snapshotRepository>
-        <id>snapshots</id>
-        <name>jfrog.cloudbinary.io-snapshots</name>
-        <url>https:http://35.76.28.95:8081/artifactory/libs-snapshot-local</url>
-    </snapshotRepository>
-</distributionManagement>
+	<distributionManagement>
+		 <snapshotRepository>
+		    <id>snapshots</id>
+		    <url>http://http://35.76.28.95:8081/artifactory/libs-snapshot-local/</url>
+		 </snapshotRepository>
+		
+		<repository>
+		    <id>snapshots</id>
+		    <url>http://35.76.28.95:8081/artifactory/libs-snapshot-local/</url>
+		</repository>
+  	</distributionManagement>
 	
 	<pluginRepositories>
 	    <pluginRepository>    
