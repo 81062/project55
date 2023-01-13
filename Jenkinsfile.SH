@@ -1,20 +1,19 @@
 pipeline {
     agent any 
-    tools {
-         maven 'MAVEN'
-         jdk 'JAVA'
+  environment {
+        PATH = "/usr/share/maven"
     }
     stages {
 
-        stage('Stage-0 : Static Code Analysis Using SonarQube') { 
+        stage('GetCode') { 
             steps {
-                sh 'mvn clean verify sonar:sonar'
+                git ''
             }
         }
 
-        stage('Stage-1 : Clean') { 
+        stage('Stage-1 : clean') { 
             steps {
-                sh 'mvn clean'
+                sh 'mvn clean package'
             }
         }
          stage('Stage-2 : Validate') { 
@@ -27,9 +26,9 @@ pipeline {
                 sh 'mvn compile'
             }
         }
-         stage('Stage-4 : Test') { 
+         stage('sonarQube analysis') { 
             steps {
-                sh 'mvn test -DskipTests'
+                sh 'mvn sonar:sonar'
             }
         }
           stage('Stage-5 : Install') { 
@@ -56,13 +55,13 @@ pipeline {
 
           stage('Stage-9 : Deployment - Deploy a Artifact devops-3.0.0-SNAPSHOT.war file to Tomcat Server') { 
             steps {
-                sh 'curl -u admin:redhat@123 -T target/**.war "http://43.207.90.227:8080/manager/text/deploy?path=/softobiz&update=true"'
+                sh 'curl -u admin:redhat@123 -T target/**.war "http://54.238.178.6:8080/manager/text/deploy?path=/softobiz&update=true"'
             }
         } 
   
           stage('Stage-10 : SmokeTest') { 
             steps {
-                sh 'curl --retry-delay 10 --retry 5 "http://43.207.90.227:8080/AWS"'
+                sh 'curl --retry-delay 10 --retry 5 "http://54.238.178.6:8080/AWS"'
             }
         }
 
