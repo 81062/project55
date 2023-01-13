@@ -7,7 +7,7 @@ pipeline {
 
         stage('GetCode') { 
             steps {
-                git ''
+                git 'https://github.com/81062/project55.git'
             }
         }
 
